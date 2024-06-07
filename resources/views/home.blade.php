@@ -9,7 +9,7 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    <h1>My Laravel-Vite Template</h1>
+    <h1>My Laravel-Vite Template</h1> 
     <img src="{{ Vite::asset('resources/img/duck.png') }}" alt="Testo">
 </body>
 </html>
