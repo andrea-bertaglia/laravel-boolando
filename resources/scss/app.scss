@@ -1,1 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./partials/variables";
+
+.ms_bg-header {
+    background-color: $orange;
+}
