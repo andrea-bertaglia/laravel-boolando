@@ -5,9 +5,10 @@
             {{-- menù links --}}
             <div class="col fw-bold d-flex align-items-center">
                 <ul class="d-flex align-items-center mb-0 list-unstyled gap-3">
-                    <li><a class="text-decoration-none text-white" href="#">Donna</a></li>
-                    <li><a class="text-decoration-none text-white" href="#">Uomo</a></li>
-                    <li><a class="text-decoration-none text-white" href="#">Bambini</a></li>
+                    <li><a class="text-decoration-none text-white" href="/">Tutti</a></li>
+                    <li><a class="text-decoration-none text-white" href="donna">Donna</a></li>                   
+                    <li><a class="text-decoration-none text-white" href="uomo">Uomo</a></li>
+                    <li><a class="text-decoration-none text-white" href="bambini">Bambini</a></li>
                 </ul>
             </div>
             {{-- /menù links --}}

@@ -1,6 +1,5 @@
 <div class="card-img position-relative">
-    <img class="w-100" src="{{ Vite::asset('resources/img/' . $product['frontImage']) }}" alt="Testo">
-    <span class="ms_like @if($product['isInFavorites'])d-inline-block @else d-none @endif">&hearts;</span>
+    <img class="w-100" src="{{ Vite::asset('resources/img/' . $product['frontImage']) }}" alt="{{'Articolo: ' . $product['name'] . ' - Brand: ' . $product['name']}}">
 
     <div class="ms_labels">
     {{-- badges (se presenti) --}}
@@ -17,7 +16,7 @@
         @endforeach
     </div>
     {{-- /badges (se presenti) --}}
-    
+
 </div>
 <div class="card-text d-flex flex-column pb-4">
     <span class="small">{{$product['brand']}}</span>
