@@ -1,4 +1,4 @@
-<footer class="bg-black">
+<div class="bg-black">
     <div class="container text-white py-3">
         <div class="row d-flex justify-content-between">
             {{-- box di sinistra con links --}}
@@ -30,4 +30,4 @@
 
         
     </div>
-</footer>
+</div>

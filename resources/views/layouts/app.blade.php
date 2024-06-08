@@ -9,12 +9,16 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    @include('partials.header')
+    <header>
+        @include('partials.header')
+    </header>
 
-    <main class="container py-5">
-        <h3>Questo è il main</h3>
+    <main>
+        @yield('main')
     </main>
 
-    @include('partials.footer')
+    <footer>
+        @include('partials.footer')
+    </footer>
 </body>
 </html>

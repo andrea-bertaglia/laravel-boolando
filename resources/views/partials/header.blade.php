@@ -1,4 +1,4 @@
-<header class="ms_bg-header">
+<div class="ms_bg-header">
     <div class="container">
         <div class="row text-white">
             
@@ -28,5 +28,5 @@
 
         </div>
     </div>
-</header>
+</div>
 
