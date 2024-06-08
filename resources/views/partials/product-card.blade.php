@@ -8,6 +8,6 @@
 </div>
 <div class="card-text d-flex flex-column">
     <span>Levi's</span>
-    <span>RelaxedZ</span>
+    <span>Relaxed fit</span>
     <p><span>14,99 €</span>29,99 €</p>
 </div>
