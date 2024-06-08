@@ -1,13 +1,29 @@
 <div class="card-img position-relative">
-    <img class="w-100" src="{{ Vite::asset('resources/img/1.webp') }}" alt="Testo">
-    <span class="ms_like">&hearts;</span>
+    <img class="w-100" src="{{ Vite::asset('resources/img/' . $product['frontImage']) }}" alt="Testo">
+    <span class="ms_like @if($product['isInFavorites'])d-inline-block @else d-none @endif">&hearts;</span>
+
     <div class="ms_labels">
-        <span class="ms_discount">-50%</span>
-        <span class="ms_category">Sostenibilità</span>
+    {{-- badges (se presenti) --}}
+    {{-- separo in due foreach per questioni di layout (per stampare prima lo sconto e poi il tag) --}}
+        @foreach ($product['badges'] as $badge)
+            @if($badge['type'] === 'discount')
+                <span class="ms_discount">{{$badge['value']}}</span>
+            @endif
+        @endforeach
+        @foreach ($product['badges'] as $badge)
+            @if($badge['type'] === 'tag')
+                <span class="ms_category">{{$badge['value']}}</span>
+            @endif
+        @endforeach
     </div>
+    {{-- /badges (se presenti) --}}
+    
 </div>
-<div class="card-text d-flex flex-column">
-    <span>Levi's</span>
-    <span>Relaxed fit</span>
-    <p><span>14,99 €</span>29,99 €</p>
+<div class="card-text d-flex flex-column pb-4">
+    <span class="small">{{$product['brand']}}</span>
+    <span class="fw-bold fs-6">{{strtoupper($product['name'])}}</span>
+    <div>
+        <span class="me-1 text-danger fw-bold fs-6">{{$product['price']}} €</span>
+        <span class="text-decoration-line-through">29,99 €</span>
+    </div>
 </div>
