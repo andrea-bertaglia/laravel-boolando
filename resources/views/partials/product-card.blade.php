@@ -1,8 +1,11 @@
 <div class="card-img position-relative">
     <img class="w-100" src="{{ Vite::asset('resources/img/' . $product['frontImage']) }}" alt="{{'Articolo: ' . $product['name'] . ' - Brand: ' . $product['name']}}">
-    {{-- @if($product['isInFavorities'])
+
+    {{-- stampo il like se è presente --}}
+    @if($product['isInFavorites'])
     <span class="ms_like"><i class="fa-solid fa-heart"></i></span>
-    @endif --}}
+    @endif
+    
     {{-- badges (se presenti) --}}
     <div class="ms_labels">
         {{-- separo in due foreach per questioni di layout (per stampare prima lo sconto e poi il tag) --}}
@@ -28,7 +31,12 @@
     <span class="small">{{$product['brand']}}</span>
     <span class="fw-bold fs-6">{{strtoupper($product['name'])}}</span>
     <div>
-        <span v-if="{{$amount_discount !== 0}}" class="me-1 text-danger fw-bold fs-6">{{($product['price'] + $amount_discount )}} €</span>
+        <span class="me-1 text-danger fw-bold fs-6">{{($product['price'] + $amount_discount )}} €</span>
+
+        {{-- se non c'è lo sconto, stampo il prezzo originale --}}
+        @if($amount_discount !== 0)
         <span class="text-decoration-line-through">{{$product['price']}} €</span>
+        @endif
+        
     </div>
 </div>
