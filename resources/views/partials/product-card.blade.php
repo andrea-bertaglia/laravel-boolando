@@ -11,11 +11,11 @@
         {{-- separo in due foreach per questioni di layout (per stampare prima lo sconto e poi il tag) --}}
         @foreach ($product['badges'] as $badge)
                 {{-- aggiungo una variabile per memorizzare l'importo dello sconto --}}
-                <?php $amount_discount = 0 ?>
+                @php $amount_discount = 0 @endphp
                 @if($badge['type'] === 'discount')
                     <span class="ms_discount">{{$badge['value']}}</span>
                         {{-- se è prsente il value discount, calcolo l'importo dello sconto (valore negativo) --}}
-                        <?php $amount_discount = round($product['price'] * intval($badge['value']) / 100, 2) ?>
+                        @php $amount_discount = round($product['price'] * intval($badge['value']) / 100, 2) @endphp
                 @endif
             @endforeach
             @foreach ($product['badges'] as $badge)
