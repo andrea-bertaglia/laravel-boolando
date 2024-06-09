@@ -1,5 +1,5 @@
 <div class="bg-black">
-    <div class="container text-white py-3">
+    <div class="container text-white py-4">
         <div class="row d-flex justify-content-between">
             {{-- box di sinistra con links --}}
             <div class="col-8">
@@ -15,13 +15,36 @@
             {{-- /box di sinistra con links --}}
 
             {{-- box di destra con social --}}
-            <div class="col-3">
+            <div class="col-2">
                 <h6 class="text-center fw-bold">
-                    Seguici anche su
+                    Trovaci anche su
                 </h6>
-                <div class="text-center">
-                    ◉ ◉ ◉ ◉ ◉ 
-                </div>
+                    <ul class="d-flex justify-content-center align-items-center list-unstyled gap-2 fs-5">
+                        <li>
+                            <a class="text-white" href="#">
+                                <i class="fa-brands fa-square-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#">
+                                <i class="fa-brands fa-square-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#">
+                                <i class="fa-brands fa-square-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="#">
+                                <i class="fa-brands fa-square-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
             </div>
             {{-- /box di destra con social --}}
 

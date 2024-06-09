@@ -21,9 +21,9 @@
 
             {{-- icone --}}
             <div class="col d-flex justify-content-end align-items-center gap-2 fs-4">
-                <span>⌘</span>
-                <span>&hearts;</span>
-                <span>⇧</span>
+                <span><i class="fa-regular fa-user"></i></span>
+                <span><i class="fa-regular fa-heart"></i></span>
+                <span><i class="fa-solid fa-bag-shopping"></i></span>
             </div>
             {{-- /icone --}}
 
